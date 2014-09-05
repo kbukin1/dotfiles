@@ -1,0 +1,32 @@
+
+# $Id: //hw/nv/env/.cshrc_custom#1 $
+
+
+########################################
+# CUSTOM ALIASES
+########################################
+
+#alias ghostview "/home/ghostview/bin/ghostview -bg gray90"
+
+
+########################################
+# CUSTOM ENV VARIABLES
+########################################
+
+# setenv NV17 /home/scratch.${USER}/nv17
+
+
+########################################
+# CUSTOM PATHS
+########################################
+
+setenv MANPAGER less
+# setenv P4DIFF ~/usr/bin/tkdiff
+setenv P4DIFF vimdiff
+setenv PATH $HOME/usr/bin\:/usr/bin\:$PATH\:/home/utils/git-1.9.2/bin
+
+# set path = ( \
+# 	/home/scratch.${USER}/nv17/bin \
+# 	$path \
+# )
+

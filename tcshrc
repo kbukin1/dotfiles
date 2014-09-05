@@ -1,0 +1,13 @@
+bindkey -e
+alias precmd "echo ''"
+set ellipsis
+#set prompt = "%m,%n:%.02%# "
+set prompt='%m:%c%#'
+set autolist
+set correct=cmd
+#set complete=enhance
+set printexitvalue
+set time = 10
+set history = 500
+set visiblebell
+
