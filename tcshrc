@@ -1,3 +1,5 @@
+source ~/.cshrc
+
 bindkey -e
 alias precmd "echo ''"
 set ellipsis
