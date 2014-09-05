@@ -1,5 +1,9 @@
 # $Id: //hw/nv/env/.aliases#5 $
 
+# removing . from $PATH
+setenv PATH `echo $PATH | sed 's/:\.:/:/g'`
+setenv MESA_NO_3DNOW 1
+
 #setup env if this is beings sourced from someone else's shell
 if (! $?HAME) setenv HNAME `hostname`
 if (! $?SEP)  setenv SEP   ":"
@@ -18,25 +22,35 @@ alias l ls
 alias hg "h | g \!*"
 alias po popd
 alias pu pushd
-alias resource "source ~/.cshrc; source ~/.login"
 
-alias frame maker
-alias framemaker maker
 alias gv ghostview
 alias od od -tx4 -Ax
 alias od2 xxd -g4
 # alias cc /home/utils/gcc-4.2.4/bin/g++
 alias tkdiff ~/usr/bin/tkdiff
 
+alias s 'pwd > ~/.saved_dir/\!*'
+alias p 'pd `cat ~/.saved_dir/\!*`'
+alias g 'cd `cat ~/.saved_dir/\!*`'
+alias go 'cd `cat ~/.saved_dir/\!*`'
+alias so source
 
- # FORCE SPECIFIC PATHS AND ARGUMENTS
-# alias gcc cc
+alias vi /home/utils/vim-7.4/bin/vim
+alias p4 'p4 -d `/bin/pwd`'
+
+alias qsh 'qsub -P kepler -q o_pri_interactive_cpu_2G  -Is tcsh'
+
+alias cd.. "cd .."
+alias make_mdiag "make Build MDIAG_PARALLELMAKE=1 NV_DISTCC=1"
+alias make_mdiag_rel "make Build MDIAG_PARALLELMAKE=1 NV_DISTCC=1 OPT_LEVEL=1"
+alias cp cp -i
+
+# FORCE SPECIFIC PATHS AND ARGUMENTS
 alias lp "lp -w"
 alias pushd  'pushd \!*; cd .'
 alias popd  'popd \!*; cd .'
 alias lpr 'lpr -h'	# skip header page on print jobs
 alias setcl 'setenv CHANGELIST `p4 changes -m1 //kbukin_bringup_g80/sw/pvt/...#have | cut -d" " -f2`'
-
 
 if ($OSTYPE == "SunOS") then
   # these /home/gnu programs are sun-only
@@ -55,8 +69,7 @@ endif
 
 alias man 'man -a'
 
-
- # PRINTING ALIASES
+# PRINTING ALIASES
 alias printstdio2  "enscript --fancy-header --no-job-header --landscape --columns=2 --font=Courier7 -DDuplex:true --output=- \!*"
 alias printstdio2a "enscript --fancy-header --no-job-header --landscape --columns=2 --font=Courier7 -DDuplex:false --output=- \!*"
 alias printstdio1  "enscript --fancy-header --no-job-header --portrait --columns=1 --font=Courier9 -DDuplex:false --output=- \!*"
@@ -70,103 +83,17 @@ alias print   "print2"
 alias enscriptp "print -p\!*.ps \!*"
 
 
- # TERMINAL ALIASES
-alias xterm_sized "xterm -sb -sl 600 -fg white -bg gray40 -cr yellow -fn 9x15 -name $HNAME"
-alias xx "xterm_sized \!* &"
-alias xh "xterm_sized -fg black -bg white &"
-alias xs "nohup xterm_sized & ; exit"
-alias xn "xterm_sized -title \!* &"
-alias wx "winterm -geometry 80x24"
-if ($?DISPLAY) then
-  alias fastcase "xterm -bg gray90 -fg darkgreen -sb -sl 2000 -display $DISPLAY -title FAST_CASE"
-  alias slowcase "xterm -bg gray90 -fg darkred -sb -sl 2000 -display $DISPLAY -title SLOW_CASE"
-  alias bfastcase "bsub -q primetime4g fastcase"
-  alias bslowcase "bsub -q primetime4g slowcase"
-endif
-
-
- # ENABLE/DISABLE "TRACE" MESSAGES
-
+# ENABLE/DISABLE "TRACE" MESSAGES
 alias trace 'perl -pi -e "s/^\#\#echo/echo/;"' ~/.cshrc ~/.cshrc_tools ~/.login ~/.cshrc_custom ~/.aliases
 alias untrace 'perl -pi -e "print chr(35).chr(35) if (/^echo .trace/);"' ~/.cshrc ~/.cshrc_tools ~/.login ~/.cshrc_custom ~/.aliases
 
-
- # MISC
-
-#if ($OSTYPE == "Win32") then
-#  # alias p4pwd	'cygpath -w $PWD'
-#  alias p4pwd	'/bin/pwd'
-#else
-#  alias p4pwd	'/bin/pwd'
-#  # alias vi /home/gnu/vim-6.3/bin/vim
-#  alias vi $MY_FAV_EDITOR
-#endif
-#
-
-alias vi /home/utils/vim-7.4/bin/vim
-
-alias p4_diff	'p4_xdiff -d'
-alias p4 'p4 -d `/bin/pwd`'
-
 alias checkbuild "egrep -i '(\*\*|error)' \!* | grep -v ignore"
 alias nv 'cd $NV'
-alias igrep 'grep -i'
-
-alias get_lic_vcs 'brun -N -L "-q vcs" xterm'
-alias get_lic_xl  'brun -N -L "-q normal" xterm'
-
-alias lc 'wc -l'
-
-alias email 'ypcat passwd | egrep -i \(\!*\)'
-
-alias ud unsetenv DISPLAY
-
-alias view "vile -R"
 
 alias errgrep 'grep Error \!* | egrep -v "msg =|Test-Compiler"|more'
 
-alias lvcs 'show_users -Q vcs'
-alias vf 'verifilter -f verifilter.cmd -y .'
-
-alias bv 'bsub -q vcs'
-
 alias dos2unix "perl -pi -e 's/\cM//g;'"
 alias unix2dos "perl -pi -e 's/\n/\cM\n/m;'"
-
- # set emacs to use the file name if we have a display
-if ($?DISPLAY) then
-  alias e "emacs -bg gray90"
-   # setenv FNAME will resolve any environment vars
-  alias en 'setenv FNAME \!*; e -fn 8x13 -name `basename $FNAME` \!* &'
-  alias es 'setenv FNAME \!*; e -fn 6x12 -name `basename $FNAME` \!* &'
-else
-  alias e "emacs"
-   # setenv FNAME will resolve any environment vars
-  alias en e
-  alias es e
-endif
-
-#alias qsh 'qsub -Pnv50 -Is -q l_pri_cpu_.4G tcsh'
-#alias qsh 'qsub -Pnv50 -R 24 -Is -q l_pri_interactive tcsh'
-#alias qsh 'qsub -Pnv50 -R "rusage[mem=4000]" -Is -q l_pri_interactive tcsh'
-#alias qsh 'qsub -P fermi -R "rusage[mem=4000]" -Is -q o_pri_interactive tcsh'
-alias qsh 'qsub -P kepler -q o_pri_interactive_cpu_2G  -Is tcsh'
-
-
-alias s 'pwd > ~/.saved_dir/\!*'
-alias p 'pd `cat ~/.saved_dir/\!*`'
-alias g 'cd `cat ~/.saved_dir/\!*`'
-alias go 'cd `cat ~/.saved_dir/\!*`'
-alias so source
-
-alias pd pushd
-alias cd.. "cd .."
-alias make_mdiag "make Build MDIAG_PARALLELMAKE=1 NV_DISTCC=1"
-alias make_mdiag_rel "make Build MDIAG_PARALLELMAKE=1 NV_DISTCC=1 OPT_LEVEL=1"
-alias cp cp -i
-#alias gdb /home/gnu/ia-32/7.2/gdb-5.3/bin/gdb
-
-setenv MESA_NO_3DNOW 1
 
 alias codep_checking = " ./bin/autosubmit \
                         -srcClient kbukin_mods   \
@@ -176,34 +103,23 @@ alias codep_checking = " ./bin/autosubmit \
                         "
 #alias vncw /home/gnu/vnc-3.3.7/bin/vncserver -geometry 1280x1024 -depth 32 -pixelformat rgb888   
 #alias vncw /home/utils/vnc-4.1.2/bin/vncserver -geometry 1900x1200 -depth 32 -pixelformat rgb888   
-alias vncw  /home/utils/vnc-E4_6_3-x64/bin/vncserver -geometry 1900x1200 -depth 32 -pixelformat rgb888   
 
-# removing . from $PATH
-setenv PATH `echo $PATH | sed 's/:\.:/:/g'`
-alias less 'env SHELL="/bin/csh -f" less'
-#alias qtdiff ~cdonham/bin/qtdiff 
+alias glivd /home/nv/utils/tdbg/bin/glivd
+alias imgcomp /home/arch_traces_fermi/kbukin/trees/tree7/hw/tools/ace/blessed_files/imgcomp/imgcomp
+
+#alias tless "tar vxfz \!:1 test.hdr && less test.hdr"
+alias tless "tar vxfz \!:1 test.hdr && less test.hdr && rm test.hdr"
+alias bc3 ~jtrapasso/bin/bcompare
+alias pss "ps auwx | grep kbukin |wc -l"
+
+alias vncw  /home/utils/vnc-E4_6_3-x64/bin/vncserver -geometry 1900x1200 -depth 32 -pixelformat rgb888   
 alias qtdiff ~/usr/bin/qtdiff 
 alias tkdiff ~/usr/bin/tkdiff
 alias trace_disassembler /home/scratch.kbukin_nv50/kbukin_tesla/hw/hw/class/tools/trace_disassembler/Release_Fermi/trace_disassembler
-#alias t_d /home/scratch.rohannessian_fermi/hw/class/tools/trace_disassembler/Release_Fermi/trace_disassembler
-#alias t_d /home/scratch.rohannessian_fermi/hw/class/tools/trace_disassembler/Release_Fermi/trace_disassembler
-#alias t_d /home/scratch.kbukin_fermi/tree-2/hw/hw/class/tools/trace_disassembler/Release/trace_disassembler
-#alias t_d /home/scratch.kbukin_nv50/kbukin_tesla/hw/hw/class/tools/trace_disassembler/Release_Kepler/trace_disassembler
 alias t_d /home/scratch.kbukin_nv50/kbukin_tesla/hw/hw/kepler1_gk100/../class/tools/trace_disassembler/Release_Kepler//trace_disassembler
 
 alias ssh ssh -X
 alias p4review /home/scratch.kbukin_gm100/kbukin_mods/sw/sw/main/apps/p4review/p4review.pl
 alias p4rmerge /home/scratch.kbukin_gm100/kbukin_mods/sw/sw/main/apps/p4review/p4rmerge.pl
 # p4review -save -server -uploadcmd 'curl -u svcsw:Gforcetop#1 --upload-file' 4716528
-
-alias glivd /home/nv/utils/tdbg/bin/glivd
-alias imgcomp /home/arch_traces_fermi/kbukin/trees/tree7/hw/tools/ace/blessed_files/imgcomp/imgcomp
-
-alias tree-2 "setenv P4ROOT /home/scratch.kbukin_fermi/tree-2/sw && setenv MODS_RUNSPACE /home/scratch.kbukin_fermi/tree-2/runspace"
-alias tesla "setenv P4ROOT /home/scratch.kbukin_nv50/kbukin_tesla/sw && setenv MODS_RUNSPACE /home/scratch.kbukin_nv50/kbukin_tesla/runspace"
-
-#alias tless "tar vxfz \!:1 test.hdr && less test.hdr"
-alias tless "tar vxfz \!:1 test.hdr && less test.hdr && rm test.hdr"
-alias bc3 ~jtrapasso/bin/bcompare
-alias pss "ps auwx | grep kbukin |wc -l"
 
