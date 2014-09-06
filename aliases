@@ -35,7 +35,7 @@ alias g 'cd `cat ~/.saved_dir/\!*`'
 alias go 'cd `cat ~/.saved_dir/\!*`'
 alias so source
 
-alias vi /home/utils/vim-7.4/bin/vim
+alias vi vim
 alias p4 'p4 -d `/bin/pwd`'
 
 alias qsh 'qsub -P kepler -q o_pri_interactive_cpu_2G  -Is tcsh'
