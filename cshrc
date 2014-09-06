@@ -249,9 +249,9 @@ endif
 
 ##echo "trace_c03"
 
-if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
-  setenv LD_LIBRARY_PATH `addtopath.pl -quiet LD_LIBRARY_PATH /usr/lib ${HOME}/lib .`
-endif
+#if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
+ #setenv LD_LIBRARY_PATH `addtopath.pl -quiet LD_LIBRARY_PATH /usr/lib ${HOME}/lib .`
+#endif
 
 set OSREV=`uname -r`
 
@@ -292,9 +292,9 @@ endif
 
 ##echo "trace_c05"
 
-if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
-  source ${HOME}/.cshrc_tools
-endif
+#if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
+#  source ${HOME}/.cshrc_tools
+#endif
 
 if ($OSTYPE == "Win32") then
   # Windows tool setup here
@@ -370,8 +370,8 @@ if (($?INIT_TCSH) && ($INIT_TCSH == 1)) then
   
   set matchbeep=nomatch
   #set tty=`/bin/tty | /bin/sed 's/\/dev\/tty//'`
-  if ($OSTYPE == "SunOS") set tty=`/bin/tty | /home/utils/perl-5.6.1/bin/perl5.6.1 -pe 's/\/dev\/\w+\///'`
-  if ($OSTYPE == "Linux") set tty=`/usr/bin/tty | /home/utils/perl-5.8.6/bin/perl -pe 's/\/dev\/\w+\///'`
+  # if ($OSTYPE == "SunOS") set tty=`/bin/tty | /home/utils/perl-5.6.1/bin/perl5.6.1 -pe 's/\/dev\/\w+\///'`
+  # if ($OSTYPE == "Linux") set tty=`/usr/bin/tty | /home/utils/perl-5.8.6/bin/perl -pe 's/\/dev\/\w+\///'`
   set	histfile="$HOME/.$HNAME-$tty"
 ##echo "trace_t10"
   source ${HOME}/.login

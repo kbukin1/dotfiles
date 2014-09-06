@@ -83,10 +83,6 @@ alias print   "print2"
 alias enscriptp "print -p\!*.ps \!*"
 
 
-# ENABLE/DISABLE "TRACE" MESSAGES
-alias trace 'perl -pi -e "s/^\#\#echo/echo/;"' ~/.cshrc ~/.cshrc_tools ~/.login ~/.cshrc_custom ~/.aliases
-alias untrace 'perl -pi -e "print chr(35).chr(35) if (/^echo .trace/);"' ~/.cshrc ~/.cshrc_tools ~/.login ~/.cshrc_custom ~/.aliases
-
 alias checkbuild "egrep -i '(\*\*|error)' \!* | grep -v ignore"
 alias nv 'cd $NV'
 
@@ -109,7 +105,7 @@ alias imgcomp /home/arch_traces_fermi/kbukin/trees/tree7/hw/tools/ace/blessed_fi
 
 #alias tless "tar vxfz \!:1 test.hdr && less test.hdr"
 alias tless "tar vxfz \!:1 test.hdr && less test.hdr && rm test.hdr"
-alias bc3 ~jtrapasso/bin/bcompare
+alias bc3 /home/jtrapasso/bin/bcompare
 alias pss "ps auwx | grep kbukin |wc -l"
 
 alias vncw  /home/utils/vnc-E4_6_3-x64/bin/vncserver -geometry 1900x1200 -depth 32 -pixelformat rgb888   
