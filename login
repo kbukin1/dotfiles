@@ -28,5 +28,5 @@ if ($TERM == "dumb") then
 endif
 
 ##echo "trace_l10"
-source ~/.show-path
+#source ~/.show-path
 ##echo "trace_l20"
