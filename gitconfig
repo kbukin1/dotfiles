@@ -1,0 +1,11 @@
+[diff]
+    tool=vimdiff
+[user]
+    name = Konstantin Bukin
+    email = kbukin@nvidia.com
+[color]
+    diff = auto
+[core]
+    editor = vi
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
