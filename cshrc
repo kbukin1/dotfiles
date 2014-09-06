@@ -174,8 +174,6 @@ if ($OSTYPE == "SunOS") then
     )
 endif
 
-##echo "trace_c025"
-
 if ($OSTYPE == "Win32") then
 #  if (-d "/cygdrive/c/WINDOWS") then
 #    set cdrive = "/cygdrive/c"

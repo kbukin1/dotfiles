@@ -23,7 +23,7 @@
 setenv MANPAGER less
 # setenv P4DIFF ~/usr/bin/tkdiff
 setenv P4DIFF vimdiff
-setenv PATH $HOME/usr/bin\:/usr/bin\:$PATH\:/home/utils/git-1.9.2/bin
+setenv PATH "$HOME/usr/bin\:/usr/bin\:$PATH\:/home/utils/git-1.9.2/bin"
 
 # set path = ( \
 # 	/home/scratch.${USER}/nv17/bin \
