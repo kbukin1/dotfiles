@@ -154,7 +154,6 @@ if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
     /usr/ucb \
     /usr/ccs/bin \
     /usr/lib \
-    /etc \
     /home/nv/bin \
   )
 endif
