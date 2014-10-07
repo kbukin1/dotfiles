@@ -174,31 +174,29 @@ if ($OSTYPE == "SunOS") then
     )
 endif
 
-##echo "trace_c025"
-
 if ($OSTYPE == "Win32") then
-  if (-d "/cygdrive/c/WINDOWS") then
-    set cdrive = "/cygdrive/c"
-  else if (-d "/cygdrive/x/WINDOWS") then
-    # under citrix, windows apps are on x:, not c:
-    set cdrive = "/cygdrive/x"
-  else
-    echo "ERROR: can't find windows dir!"
-    set cdrive = "/cygdrive/c"
-  endif
-
-  if (-d "$cdrive/Program Files (x86)") then
-    set progfiles32b = "Program Files (x86)"
-  else
-    set progfiles32b = "Program Files"
-  endif 
-  
-  # Win32-specific paths
-  set path = ( \
-    $path:q \
-    $cdrive/windows/system32 \
-    $cdrive/windows/system32/wbem \
-  )
+#  if (-d "/cygdrive/c/WINDOWS") then
+#    set cdrive = "/cygdrive/c"
+#  else if (-d "/cygdrive/x/WINDOWS") then
+#    # under citrix, windows apps are on x:, not c:
+#    set cdrive = "/cygdrive/x"
+#  else
+#    echo "ERROR: can't find windows dir!"
+#    set cdrive = "/cygdrive/c"
+#  endif
+#
+#  if (-d "$cdrive/Program Files (x86)") then
+#    set progfiles32b = "Program Files (x86)"
+#  else
+#    set progfiles32b = "Program Files"
+#  endif 
+#  
+#  # Win32-specific paths
+#  set path = ( \
+#    $path:q \
+#    $cdrive/windows/system32 \
+#    $cdrive/windows/system32/wbem \
+#  )
 
   # these paths may or may not be present, only add them to the $path if they exist
 
@@ -212,38 +210,38 @@ if ($OSTYPE == "Win32") then
   # hard code Program Files for programs (like Perforce) that have both 32b and 64b versions.  For
   # programs with only a 32b version, use the progfiles32b env variable.
 
-  foreach testvar ( \
-                    "$cdrive/$progfiles32b/Microsoft Visual Studio 8/Common7\IDE" \
-                    "$cdrive/$progfiles32b/Microsoft Visual Studio 8/VC/bin" \
-                    "$cdrive/$progfiles32b/Microsoft Visual Studio .NET 2003/Vc7/bin" \
-                    "$cdrive/progra~1/micros~3/vc98/bin" \
-                    "$cdrive/progra~1/micros~3/common/msdev98/bin" \
-                    "$cdrive/Program Files/Perforce" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Office14" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Office13" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Office12" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Office11" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Office10" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Visio14" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Visio13" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Visio12" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Visio11" \
-                    "$cdrive/$progfiles32b/Microsoft Office/Visio10" \
-                    "$cdrive/$progfiles32b/Internet Explorer" \
-                    "$cdrive/$progfiles32b/Windows NT/Accessories" \
-                    "$cdrive/$progfiles32b/Adobe/Reader 10.0/Reader" \
-                    "$cdrive/$progfiles32b/Adobe/Acrobat 9.0/Reader" \
-                    "$cdrive/$progfiles32b/Adobe/Acrobat 8.0/Reader" \
-                    "$cdrive/$progfiles32b/Adobe/Acrobat 7.0/Reader" \
-                    "$cdrive/$progfiles32b/Adobe/Acrobat 6.0/Reader" \
-                    "$cdrive/$progfiles32b/Adobe/Acrobat 5.0/Reader" \
-                    /home/nv/bin \
-		    /home/nv/utils/cygwin/bin \
-                  )
-    if ( -d "$testvar" ) then
-      set path = ( $path:q "$testvar" )
-    endif
-  end
+#  foreach testvar ( \
+#                    "$cdrive/$progfiles32b/Microsoft Visual Studio 8/Common7\IDE" \
+#                    "$cdrive/$progfiles32b/Microsoft Visual Studio 8/VC/bin" \
+#                    "$cdrive/$progfiles32b/Microsoft Visual Studio .NET 2003/Vc7/bin" \
+#                    "$cdrive/progra~1/micros~3/vc98/bin" \
+#                    "$cdrive/progra~1/micros~3/common/msdev98/bin" \
+#                    "$cdrive/Program Files/Perforce" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Office14" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Office13" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Office12" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Office11" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Office10" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Visio14" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Visio13" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Visio12" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Visio11" \
+#                    "$cdrive/$progfiles32b/Microsoft Office/Visio10" \
+#                    "$cdrive/$progfiles32b/Internet Explorer" \
+#                    "$cdrive/$progfiles32b/Windows NT/Accessories" \
+#                    "$cdrive/$progfiles32b/Adobe/Reader 10.0/Reader" \
+#                    "$cdrive/$progfiles32b/Adobe/Acrobat 9.0/Reader" \
+#                    "$cdrive/$progfiles32b/Adobe/Acrobat 8.0/Reader" \
+#                    "$cdrive/$progfiles32b/Adobe/Acrobat 7.0/Reader" \
+#                    "$cdrive/$progfiles32b/Adobe/Acrobat 6.0/Reader" \
+#                    "$cdrive/$progfiles32b/Adobe/Acrobat 5.0/Reader" \
+#                    /home/nv/bin \
+#		    /home/nv/utils/cygwin/bin \
+#                  )
+#    if ( -d "$testvar" ) then
+#      set path = ( $path:q "$testvar" )
+#    endif
+#  end
 endif
 
 ##echo "trace_c03"
