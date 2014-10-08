@@ -73,7 +73,7 @@ endif
 
 setenv OSTYPE_RAW `/bin/uname -s`
 setenv OSTYPE $OSTYPE_RAW
-set cygwin = `/bin/uname | /bin/grep -i 'cygwin'`
+# setenv cygwin = `/bin/uname | /bin/grep -i 'cygwin'`
 if ($OSTYPE == "Linux") then
  # linux
 else if ($OSTYPE == "SunOS") then
