@@ -289,9 +289,9 @@ endif
 
 ##echo "trace_c05"
 
-#if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
-#  source ${HOME}/.cshrc_tools
-#endif
+if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
+  source ${HOME}/.cshrc_tools
+endif
 
 if ($OSTYPE == "Win32") then
   # Windows tool setup here
