@@ -16,10 +16,6 @@
 # CUSTOMIZE THESE ENVIRONMENT VARIABLES
 #######
 
-# If DISPLAY is not set already, it will be automatically set to DEFAULTDISPLAY
-# Comment out this line if you don't want this functionality.
-setenv DEFAULTDISPLAY my_unix_box:0.0
-
 # to stop that nasty .flexlmrc file from being created 
 setenv FLEXLM_NO_CKOUT_INSTALL_LIC 1
 #tell synopsys tools not look for obsoleted keys 
@@ -311,11 +307,6 @@ if (($?VNCDESKTOP) && (! $?DISPLAY)) then
   setenv DISPLAY `echo $VNCDESKTOP | awk '{print $1}'`
 endif
 
-# If you defined your own fallback, use it
-if (($?DEFAULTDISPLAY) && (! $?DISPLAY)) then
-  setenv DISPLAY $DEFAULTDISPLAY
-endif
-
 # If REMOTEHOST exists, use it. Not too useful, since with VNC you're not likely to be on :0.0.
 if (($?REMOTEHOST) && (! $?DISPLAY)) then
   setenv DISPLAY $REMOTEHOST':0.0'
@@ -386,3 +377,4 @@ endif
 if ( -e ~/.p4client ) then
   source ~/.p4client
 endif
+
