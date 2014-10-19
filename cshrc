@@ -69,16 +69,13 @@ endif
 
 setenv OSTYPE_RAW `/bin/uname -s`
 setenv OSTYPE $OSTYPE_RAW
-# setenv cygwin = `/bin/uname | /bin/grep -i 'cygwin'`
+setenv cygwin = `/bin/uname | /bin/grep -i 'cygwin'`
 if ($OSTYPE == "Linux") then
  # linux
 else if ($OSTYPE == "SunOS") then
  # sun
-#else if ($OSTYPE == "CYGWIN_NT-5.0" || $OSTYPE == "CYGWIN_NT-5.1" || $OSTYPE == "CYGWIN_NT-5.2" || $OSTYPE == "CYGWIN_NT-6.0" || $OSTYPE == "CYGWIN_NT-6.0-WOW64") then
 else if ( $cygwin != '' ) then
  setenv OSTYPE Win32
- setenv BASH_ENV ~/.bash_env
- setenv ENV ~/.bash_env
 else
  echo "WARNING: can't determine OS type, defaulting to SunOS"
  setenv OSTYPE SunOS
