@@ -27,6 +27,7 @@ alias pu pushd
 alias gv ghostview
 alias od od -tx4 -Ax
 alias od2 xxd -g4
+alias bc bc -q
 # alias cc /home/utils/gcc-4.2.4/bin/g++
 alias tkdiff ~/usr/bin/tkdiff
 
