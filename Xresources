@@ -1,0 +1,38 @@
+xterm.VT100.saveLines: 9999
+xterm.VT100.scrollKey: true
+xterm.VT100.scrollTtyOutput: false
+xterm.VT100.visualBell: true
+
+xterm.VT100.pointerColor: red
+xterm.VT100.pointerColorBackground: yellow
+
+xterm.VT100.Background: black
+xterm.VT100.Foreground: gray
+xterm.VT100.scrollBar: false
+xterm.VT100.cursorColor: seagreen
+
+xterm.VT100.charClass: 33:48,37:48,45-47:48,64:48,43:48
+
+xterm.VT100.colorMode: true
+
+xterm.*.Background: black
+xterm.*.Foreground: gray
+!xterm.*.charClass: 33:48,37:48,45-47:48,64:48,43:48
+xterm*font:  9x15
+xterm*font1: 6x12
+xterm*font2: 7x14
+xterm*font3: 8x13
+xterm*font4: 8x16
+xterm*font5: 10x20
+xterm*font6: 12x24
+
+!##################################################################
+
+!xosview*labels:             False
+!xload*Font:                 nil2
+xload*Font:                 -*-*-*-*-*-*-6-*-*-*-*-*-*-*
+xload*Background:           bisque3
+xload*highlight:            bisque3
+xload*width:                70
+xload*height:               30
+
