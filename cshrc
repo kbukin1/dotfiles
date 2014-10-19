@@ -69,7 +69,7 @@ endif
 
 setenv OSTYPE_RAW `/bin/uname -s`
 setenv OSTYPE $OSTYPE_RAW
-setenv cygwin = `/bin/uname | /bin/grep -i 'cygwin'`
+setenv cygwin `/bin/uname | /bin/grep -i 'cygwin'`
 if ($OSTYPE == "Linux") then
  # linux
 else if ($OSTYPE == "SunOS") then
@@ -105,8 +105,6 @@ setenv	GFLAGS	-r11
 
 # whitebox workaround - whitebox sets LANG to en_US.UTF-8 which confuses man and perldoc
 unsetenv LANG
-
-##echo "trace_c022"
 
 #if ($?EDITOR) then
 #  unsetenv EDITOR
@@ -247,7 +245,6 @@ set OSREV=`uname -r`
 
 ##echo "trace_c031"
 
-#umask 027 				#set default file protection
 umask 002 				#set default file protection
 
 ##echo "trace_c04"
