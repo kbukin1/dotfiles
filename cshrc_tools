@@ -5,7 +5,7 @@
 set PATH_PROGS = ""
 
 setenv LM_LICENSE_FILE "/home/tools/admin/license_files"
-setenv SNPSLMD_LICENSE_FILE `/home/nv/bin/build_lic_list.pl /home/tools/admin/license_files/*synopsys*` # synopsys tools
+#setenv SNPSLMD_LICENSE_FILE `/home/nv/bin/build_lic_list.pl /home/tools/admin/license_files/*synopsys*` # synopsys tools
 setenv CDS_LIC_FILE 5280@lic-14,5280@lic-15,5280@lic-16
 setenv CDS_LIC_ONLY true
 
@@ -22,11 +22,11 @@ setenv XUSERFILESEARCHPATH ~/app-defaults/%N:/home/nv/env/app-defaults/%N
 setenv LSF_SERVERDIR /usr/local/lsf/etc
 set   PATH_PROGS = "$PATH_PROGS /usr/local/lsf/bin"
 
-if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
-    setenv MANPATH `addtopath.pl -quiet MANPATH /usr/local/lsf/man`
-else
-    setenv MANPATH ${MANPATH}:/usr/local/lsf/man
-endif
+#if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
+#    setenv MANPATH `addtopath.pl -quiet MANPATH /usr/local/lsf/man`
+#else
+#    setenv MANPATH ${MANPATH}:/usr/local/lsf/man
+#endif
 
 # TimingDesigner setup
 if ($OSTYPE == "SunOS") then
@@ -186,13 +186,13 @@ setenv IMODL_BIN   $IMODL/bin/$HOST_MACH-$HOST_OS
 
 set PATH_PROGS = "$PATH_PROGS $IMODL_BIN"
 
-if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
-    setenv PATH `addtopath.pl -back -quiet PATH $PATH_PROGS`
-else
-    # the ":q" suffix in $path quotes the previous path names, so we can handle
-    # path directories that contain spaces.
-    set path = ($path:q $PATH_PROGS)
-endif
+#if ($OSTYPE == "Linux" || $OSTYPE == "SunOS") then
+#    setenv PATH `addtopath.pl -back -quiet PATH $PATH_PROGS`
+#else
+#    # the ":q" suffix in $path quotes the previous path names, so we can handle
+#    # path directories that contain spaces.
+#    set path = ($path:q $PATH_PROGS)
+#endif
 
 ##echo "trace_ct06"
 
