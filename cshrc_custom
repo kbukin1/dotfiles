@@ -24,6 +24,6 @@ setenv MANPAGER less
 # setenv P4DIFF ~/usr/bin/tkdiff
 setenv P4DIFF vimdiff
 
-setenv PATH "$HOME/usr/bin:$PATH"
+setenv PATH "$HOME/usr/bin:/usr/local/bin:$PATH"
 setenv PATH "/home/utils/git-2.1.0/bin:/home/utils/tmux-1.9a/bin:$PATH"
 
