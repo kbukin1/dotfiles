@@ -1,7 +1,6 @@
 source ~/.cshrc
 
 bindkey -e
-alias precmd "echo ''"
 set ellipsis
 #set prompt = "%m,%n:%.02%# "
 set prompt='%m:%c%#'
