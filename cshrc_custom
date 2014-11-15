@@ -31,3 +31,11 @@ setenv LS_COLORS "no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd
 
 unsetenv LESSOPEN
 
+setenv LESS_TERMCAP_mb `echotc md; echotc AF 1`
+setenv LESS_TERMCAP_md `echotc md; echotc AF 1`
+setenv LESS_TERMCAP_me `echotc me`
+setenv LESS_TERMCAP_se `echotc me`
+setenv LESS_TERMCAP_so `echotc md; echotc AF 3; echotc AB 4`
+setenv LESS_TERMCAP_ue `echotc me`
+setenv LESS_TERMCAP_us `echotc md; echotc AF 2`
+
