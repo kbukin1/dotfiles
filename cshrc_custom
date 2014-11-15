@@ -27,3 +27,5 @@ setenv P4DIFF vimdiff
 setenv PATH "$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 setenv PATH "/home/utils/git-2.1.0/bin:/home/utils/tmux-1.9a/bin:$PATH"
 
+unsetenv LESSOPEN
+
