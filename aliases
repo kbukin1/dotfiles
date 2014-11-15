@@ -16,7 +16,7 @@ alias h history
 alias grep grep --colour=auto
 
 alias dir ls -l
-alias ls /bin/ls -F --color=yes
+alias ls ls -F --color=yes
 alias ll ls -l
 alias la ls -a
 alias po popd
@@ -47,21 +47,6 @@ alias pushd  'pushd \!*; cd .'
 alias popd  'popd \!*; cd .'
 alias lpr 'lpr -h'	# skip header page on print jobs
 alias setcl 'setenv CHANGELIST `p4 changes -m1 //kbukin_bringup_g80/sw/pvt/...#have | cut -d" " -f2`'
-
-if ($OSTYPE == "SunOS") then
-  # these /home/gnu programs are sun-only
-
-  alias ls '/home/gnu/bin/dir -CF'        
-  alias mv '/home/gnu/bin/mv -i'	# prompt before overwriting file
-  alias cp '/home/gnu/bin/cp -i'	# prompt before overwriting file
-  # alias rm '/home/gnu/bin/rm -i'	# prompt before removing file
-  # alias make gmake
-  # alias make smake
-  alias elm "/home/alben/bin/elm"
-  alias mail Mail
-  alias df "/home/gnu/bin/df"
-  alias diff "/home/gnu/bin/diff"
-endif
 
 alias man 'man -a'
 
@@ -110,7 +95,8 @@ alias p4rmerge /home/scratch.kbukin_gm100/kbukin_mods/sw/sw/main/apps/p4review/p
 
 # aliases to change titles of tmux's panes
 if ($TERM == screen) then
-    #alias postcmd 'printf "\033k%s\033\\" "\!#:0:t"'
-    #alias precmd  'printf "\033kcsh\033\\"'
+    # alias postcmd 'printf "\033k%s\033\\" "\!#:0:t"' # ruins history
+    alias postcmd 'printf "\033k%s\033\\" `history -h 1|cut -d" " -f1`'
+    alias precmd  'printf "\033ktcsh\033\\"'
 endif
 
