@@ -5,6 +5,7 @@
     email = kbukin@nvidia.com
 [color]
     diff = auto
+	ui = true
 [core]
     editor = vi
 [alias]
