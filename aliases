@@ -96,7 +96,7 @@ alias p4rmerge /home/scratch.kbukin_gm100/kbukin_mods/sw/sw/main/apps/p4review/p
 # aliases to change titles of tmux's panes
 if ($TERM == screen) then
     # alias postcmd 'printf "\033k%s\033\\" "\!#:0:t"' # ruins history
-    alias postcmd 'printf "\033k%s\033\\" `history -h 1|cut -d" " -f1`'
+    alias postcmd 'printf "\033k%s\033\\" `history -h 1|cut -d" " -f1| rev | cut -d/ -f1 | rev`'
     alias precmd  'printf "\033ktcsh\033\\"'
 endif
 
