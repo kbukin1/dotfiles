@@ -94,7 +94,7 @@ alias p4rmerge /home/scratch.kbukin_gm100/kbukin_mods/sw/sw/main/apps/p4review/p
 # p4review -save -server -uploadcmd 'curl -u svcsw:Gforcetop#1 --upload-file' 4716528
 
 # aliases to change titles of tmux's panes
-if ($TERM == screen) then
+if ( $?TMUX ) then
     # alias postcmd 'printf "\033k%s\033\\" "\!#:0:t"' # ruins history
     alias postcmd 'printf "\033k%s\033\\" `history -h 1|cut -d" " -f1| rev | cut -d/ -f1 | rev`'
     alias precmd  'printf "\033ktcsh\033\\"'
