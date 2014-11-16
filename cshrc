@@ -9,6 +9,8 @@
 # * map \\roswell\nv to Z:
 # > /cygdrive/z/bin/envupdate -m
 
+unalias postcmd
+unalias precmd
 
 ##echo "trace_c00"
 
