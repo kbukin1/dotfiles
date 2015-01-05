@@ -27,6 +27,7 @@ alias od od -tx4 -Ax
 alias od2 xxd -g4
 alias bc bc -q
 alias tkdiff ~/usr/bin/tkdiff
+alias bjobs bjobs -UF
 
 alias s 'pwd > ~/.saved_dir/\!*'
 alias p 'pd `cat ~/.saved_dir/\!*`'
