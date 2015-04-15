@@ -131,7 +131,6 @@ set path = ( \
   ~/bin \
   /home/utils/bin \
   /bin \
-  /home/gnu/bin \
   /usr/bin \
   . \
   $path:q \
