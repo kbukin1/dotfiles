@@ -101,3 +101,4 @@ if ( $?TMUX ) then
     alias precmd  'printf "\033ktcsh\033\\"'
 endif
 
+alias dsh /home/nv/utils/container-tools/bin/nvdocker run -t -i nv:centos57 /bin/tcsh
