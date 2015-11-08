@@ -2,9 +2,16 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" set statusline=%F%m%r%h%w\ [%l/%L,\ %v]\ [%p%%]\ %=[TYPE=%Y]\ [FMT=%{&ff}]\ %{\"[ENC=\".(&fenc==\"\"?&enc:&fenc).\"]\"}
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 set background=dark
+
+if &diff
+  " diff mode
+  set diffopt+=iwhite
+endif
 
 set noerrorbells
 set vb
@@ -28,13 +35,13 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set wildignore=*.o,*.obj
 
-set sw=4 ai noea
-set ts=4
-set shiftwidth=4
+set sw=2 ai noea
+set ts=2
+set shiftwidth=2
 
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
 
 set expandtab
@@ -161,7 +168,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.[^chpv]* imap {{ o{}O.>>$s
     autocmd BufNewFile,BufRead *.vr* imap {{ o{}O.>>$s
     autocmd BufNewFile,BufRead *.[chp]* imap {{ o{}O
-    autocmd BufNewFile,BufRead *.vx set filetype=viva
+"    autocmd BufNewFile,BufRead *.vx set filetype=viva
     autocmd BufNewFile,BufRead *.vr* set filetype=vera
 endif " has("autocmd")
 
