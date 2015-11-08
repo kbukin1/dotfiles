@@ -16,7 +16,7 @@ alias h history
 alias grep grep --colour=auto
 
 alias dir ls -l
-alias ls ls -F --color=yes
+alias ls ls -F --color=auto
 alias ll ls -l
 alias la ls -a
 alias po popd
