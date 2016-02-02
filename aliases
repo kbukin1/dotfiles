@@ -16,7 +16,7 @@ alias h history
 alias grep grep --colour=auto
 
 alias dir ls -l
-alias ls ls -F --color=auto
+alias ls ls -h -F --color=auto
 alias ll ls -l
 alias la ls -a
 alias po popd
@@ -27,7 +27,7 @@ alias od od -tx4 -Ax
 alias od2 xxd -g4
 alias bc bc -q
 alias tkdiff ~/usr/bin/tkdiff
-alias bjobs bjobs -UF
+alias bjobsw bjobs -UF
 
 alias s 'pwd > ~/.saved_dir/\!*'
 alias p 'pd `cat ~/.saved_dir/\!*`'
@@ -95,7 +95,7 @@ alias p4review /home/scratch.kbukin_gm100/kbukin_mods/sw/sw/main/apps/p4review/p
 alias p4rmerge /home/scratch.kbukin_gm100/kbukin_mods/sw/sw/main/apps/p4review/p4rmerge.pl
 # p4review -save -server -uploadcmd 'curl -u svcsw:Gforcetop#1 --upload-file' 4716528
 
-# aliases to change titles of tmux's panes
+# aliases to change titles of tmux's windows
 if ( $?TMUX ) then
     # alias postcmd 'printf "\033k%s\033\\" "\!#:0:t"' # ruins history
     alias postcmd 'printf "\033k%s\033\\" `history -h 1|cut -d" " -f1| rev | cut -d/ -f1 | rev`'
