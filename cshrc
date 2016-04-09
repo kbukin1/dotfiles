@@ -297,23 +297,22 @@ endif
 setenv PURPOSE ""
 
 # If you're on VNC, set DISPLAY from it
-if (($?VNCDESKTOP) && (! $?DISPLAY)) then
-  setenv DISPLAY `echo $VNCDESKTOP | awk '{print $1}'`
-endif
+#if (($?VNCDESKTOP) && (! $?DISPLAY)) then
+#  setenv DISPLAY `echo $VNCDESKTOP | awk '{print $1}'`
+#endif
 
 # If REMOTEHOST exists, use it. Not too useful, since with VNC you're not likely to be on :0.0.
-if (($?REMOTEHOST) && (! $?DISPLAY)) then
-  setenv DISPLAY $REMOTEHOST':0.0'
-endif
+#if (($?REMOTEHOST) && (! $?DISPLAY)) then
+#  setenv DISPLAY $REMOTEHOST':0.0'
+#endif
 
-if (($?REMOTE_HOSTNAME) && (! $?DISPLAY)) then
-  setenv DISPLAY $REMOTE_HOSTNAME':0.0'
-endif
+#if (($?REMOTE_HOSTNAME) && (! $?DISPLAY)) then
+#  setenv DISPLAY $REMOTE_HOSTNAME':0.0'
+#endif
 
 # if (! $?DISPLAY) then
 #   echo "DISPLAY not set.\n"
 # endif
-
 
 source ~/.aliases
 
