@@ -6,7 +6,10 @@ set nocompatible
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+syntax enable
 set background=dark
+" colorscheme base16-default
+" colorscheme solarized
 
 if &diff
   " diff mode
@@ -48,6 +51,9 @@ set expandtab
 
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "atch OverLength /\%81v.\+/
+
+"set undofile
+"set undodir=~/.vim/undodir
 
 "
 " set ruler
