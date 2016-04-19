@@ -9,18 +9,18 @@ set backspace=indent,eol,start
 syntax enable
 set background=dark
 "colorscheme base16-default
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
 "colorscheme elford
 colorscheme solarized
-if &diff
-  colorscheme evening
-endif
 
-if &diff
-  " diff mode
-  set diffopt+=iwhite
-endif
+let g:solarized_diffmode="high"
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_bold=0
+
+"if &diff
+"  colorscheme evening
+"  " set diffopt+=iwhite
+"endif
 
 set noerrorbells
 set vb
