@@ -16,6 +16,8 @@ let g:solarized_diffmode="high"
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 let g:solarized_bold=0
+"let g:solarized_contrast = "low"
+"let g:solarized_underline=0
 
 "if &diff
 "  colorscheme evening
