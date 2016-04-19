@@ -8,4 +8,10 @@ handle SIGALRM nopass
 
 # catch syscall ptrace
 
+#target remote tcp:10.31.217.156:6443
+
+#target remote tcp:10.31.218.57:6443
+
 #target remote tcp:10.31.217.151:6443
+
+#target remote tcp:10.31.217.161:6443
