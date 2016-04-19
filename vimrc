@@ -8,8 +8,14 @@ set nocompatible
 set backspace=indent,eol,start
 syntax enable
 set background=dark
-" colorscheme base16-default
-" colorscheme solarized
+"colorscheme base16-default
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+"colorscheme elford
+colorscheme solarized
+if &diff
+  colorscheme evening
+endif
 
 if &diff
   " diff mode
