@@ -28,6 +28,7 @@ setenv PATH "$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 setenv PATH "/home/utils/git-2.3.6/bin:/home/utils/tmux-2.1/bin:$PATH"
 
 # color ls
+setenv SHELL /bin/tcsh # this is to shut up moronic envupdate
 eval `dircolors ~/.dircolors.ansi-universal`
 
 unsetenv LESSOPEN
