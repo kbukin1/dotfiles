@@ -11,6 +11,7 @@ set background=dark
 "colorscheme base16-default
 "colorscheme elford
 colorscheme solarized
+"colorscheme gruvbox
 
 let g:solarized_diffmode="high"
 let g:solarized_termcolors=256
