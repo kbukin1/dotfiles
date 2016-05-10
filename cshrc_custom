@@ -25,7 +25,7 @@ setenv MANPAGER less
 setenv P4DIFF vimdiff
 
 setenv PATH "$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-setenv PATH "/home/utils/git-2.3.6/bin:/home/utils/tmux-2.1/bin:$PATH"
+setenv PATH "/home/utils/git-2.3.6/bin:/home/utils/tmux-2.1/bin:/home/utils/vim-7.4.712/bin:$PATH"
 
 # color ls
 setenv SHELL /bin/tcsh # this is to shut up moronic envupdate
@@ -43,3 +43,6 @@ unsetenv LESSOPEN
 
 setenv LD_LIBRARY_PATH /home/utils/libevent-2.0.22-stable/lib
 
+#setenv TEST_NVBUILD_PATH /home/scratch.kbukin/trees/nvgpu_inc/kbukin_nvgpu_jenkins5/hw/nv/utils/nvbuild/nvbuild-2.26.1
+#setenv WELD_ALREADY_RUN 1
+#setenv PERL5LIB /usr/src/trees/kbukin_nvgpu_l0/hw/nvgpu/gvlit1/include/projects
