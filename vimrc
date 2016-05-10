@@ -56,7 +56,11 @@ set tabstop=2
 set softtabstop=2
 set expandtab
 
-set expandtab
+set splitbelow
+set splitright
+
+set relativenumber
+set number
 
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "atch OverLength /\%81v.\+/
@@ -65,9 +69,11 @@ set expandtab
 "set undodir=~/.vim/undodir
 
 "
-" set ruler
+set ruler
 set showmatch
 " set Tlist_Ctags_Cmd = /home/kbukin/usr/bin/ctags
+
+set sidescroll=1
 
 if &bg == "dark"
     highlight MatchParen ctermbg=darkblue guibg=blue
