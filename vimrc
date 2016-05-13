@@ -191,6 +191,7 @@ if has("autocmd")
     autocmd BufNewFile,BufRead *.[chp]* imap {{ o{}O
 "    autocmd BufNewFile,BufRead *.vx set filetype=viva
     autocmd BufNewFile,BufRead *.vr* set filetype=vera
+    autocmd BufNewFile,BufRead Makeppfile set filetype=make
 endif " has("autocmd")
 
 map ,k :se isk=@,48-57,_,192-255
