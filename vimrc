@@ -29,7 +29,6 @@ set noerrorbells
 set vb
 set t_vb=
 set hlsearch
-" set number
 
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
@@ -72,6 +71,8 @@ set number
 set ruler
 set showmatch
 " set Tlist_Ctags_Cmd = /home/kbukin/usr/bin/ctags
+
+command! -nargs=1 Ss let @/ = <q-args>|set hlsearch
 
 set sidescroll=1
 
