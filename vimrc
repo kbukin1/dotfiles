@@ -46,13 +46,13 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set wildignore=*.o,*.obj
 
-set sw=2 ai noea
-set ts=2
-set shiftwidth=2
+set sw=4 ai noea
+set ts=4
+set shiftwidth=4
 
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set expandtab
 
 set splitbelow
@@ -60,6 +60,9 @@ set splitright
 
 set relativenumber
 set number
+
+"set cul                                      " highlight current line
+"hi CursorLine term=none cterm=none ctermbg=11 " adjust color
 
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "atch OverLength /\%81v.\+/
