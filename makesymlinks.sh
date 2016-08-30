@@ -19,11 +19,24 @@ echo "Changing to the $dir directory"
 cd $dir
 echo "...done"
 
+NOT_DOT_FILES="cygwin.bat makesymlinks.sh"
+
 for file in `ls $dir`; do
-    if [ $file == `basename $0` ] 
+    NOT_DOT_FILE=0
+    for not_dot in $NOT_DOT_FILES; do
+        if [ $not_dot == $file ]
+        then 
+            NOT_DOT_FILE=1
+            continue
+        fi
+    done
+
+    if [ $NOT_DOT_FILE == '1' ] 
     then 
+        echo Skipping $file
         continue
     fi
+
     if [ -f $olddir/.$file ]
     then 
         echo "Skipping .$file"
