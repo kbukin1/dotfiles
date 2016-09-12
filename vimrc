@@ -46,13 +46,13 @@ set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 set wildignore=*.o,*.obj
 
-set sw=4 ai noea
-set ts=4
-set shiftwidth=4
+set sw=2 ai noea
+set ts=2
+set shiftwidth=2
 
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
 
 set splitbelow
