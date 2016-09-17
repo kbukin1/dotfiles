@@ -1,6 +1,7 @@
 BoldAsFont=-1
 CursorType=block
 Scrollbar=none
+OpeningClicks=0
 Term=xterm-256color
 
 ForegroundColour=161, 178, 180
