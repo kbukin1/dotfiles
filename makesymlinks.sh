@@ -37,11 +37,11 @@ for file in `ls $dir`; do
         continue
     fi
 
-    if [ -f $olddir/.$file ]
-    then 
-        echo "Skipping .$file"
-        continue
-    fi
+    #if [ -f $olddir/.$file ]
+    #then 
+    #    echo Skipping .$file
+    #    continue
+    #fi
 
     echo "Moving .$file from ~ to $olddir"
     mv ~/.$file $olddir
