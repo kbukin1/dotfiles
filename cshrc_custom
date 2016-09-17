@@ -25,7 +25,7 @@ setenv MANPAGER less
 setenv P4DIFF vimdiff
 
 setenv PATH "$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-setenv PATH "/home/utils/git-2.9.2/bin:/home/utils/tmux-2.1/bin:/home/utils/vim-7.4.712/bin:$PATH"
+setenv PATH "/home/utils/git-2.9.2/bin:/home/utils/tmux-2.2/bin:/home/utils/vim-7.4.712/bin:$PATH"
 
 # color ls
 setenv SHELL /bin/tcsh # this is to shut up moronic envupdate
