@@ -59,6 +59,11 @@ if has('folding')
   set foldlevelstart=99  " start unfolded
 endif
 
+if v:version > 703 || v:version == 703 && has('patch541')
+  set formatoptions+=j " remove comment leader when joining comments
+endif
+set formatoptions+=n   " smart auto-indenting inside numbered lists
+
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 "if exists('+colorcolumn')
