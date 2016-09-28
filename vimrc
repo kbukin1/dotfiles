@@ -31,13 +31,13 @@ syntax on
 set backspace=indent,eol,start " allow unrestricted over everything in insert mode
 set autoindent	               " always set autoindenting on
 set history=50	               " keep 50 lines of command line history
-set ruler		               " show the cursor position all the time
-set showcmd		               " display incomplete commands
-set incsearch	               " do incremental searching
+set ruler		                   " show the cursor position all the time
+set showcmd		                 " display incomplete commands
+set incsearch	                 " do incremental searching
 set wildignore=*.o,*.obj
 set showmatch
-set cursorline               " highlight current line
-set expandtab                " use spaces instead of tabs
+set cursorline                 " highlight current line
+set expandtab                  " use spaces instead of tabs
 
 set sw=2 ai noea
 set ts=2
