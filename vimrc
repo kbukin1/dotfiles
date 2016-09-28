@@ -2,17 +2,12 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" set statusline=%F%m%r%h%w\ [%l/%L,\ %v]\ [%p%%]\ %=[TYPE=%Y]\ [FMT=%{&ff}]\ %{\"[ENC=\".(&fenc==\"\"?&enc:&fenc).\"]\"}
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-syntax enable
 set background=dark
 "colorscheme base16-default
 "colorscheme elford
-colorscheme solarized
 "colorscheme gruvbox
 
+colorscheme solarized
 let g:solarized_diffmode="high"
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
@@ -30,21 +25,19 @@ set vb
 set t_vb=
 set hlsearch
 
-autocmd Filetype gitcommit setlocal spell textwidth=72
-
+syntax enable
 syntax on
 
-set autoindent		" always set autoindenting on
-" if has("vms")
-"   set nobackup		" do not keep a backup file, use versions instead
-" else
-"   set backup		" keep a backup file
-" endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
+set backspace=indent,eol,start " allow unrestricted over everything in insert mode
+set autoindent	               " always set autoindenting on
+set history=50	               " keep 50 lines of command line history
+set ruler		               " show the cursor position all the time
+set showcmd		               " display incomplete commands
+set incsearch	               " do incremental searching
 set wildignore=*.o,*.obj
+set showmatch
+set cursorline               " highlight current line
+set expandtab                " use spaces instead of tabs
 
 set sw=2 ai noea
 set ts=2
@@ -53,13 +46,27 @@ set shiftwidth=2
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
-set expandtab
+
 
 set splitbelow
 set splitright
 
 set relativenumber
 set number
+
+if has('folding')
+  set foldmethod=indent  " faster than syntax
+  set foldlevelstart=99  " start unfolded
+endif
+
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
+"if exists('+colorcolumn')
+"  " highlight up to 255 columns (this is the current vim max) beyond
+"  " 'textdidth'
+"  let &l:colorcolumn='+' . join(range(0,254), ',+')
+"endif
+
 
 "set cul                                      " highlight current line
 "hi CursorLine term=none cterm=none ctermbg=11 " adjust color
@@ -71,8 +78,6 @@ set number
 "set undodir=~/.vim/undodir
 
 "
-set ruler
-set showmatch
 " set Tlist_Ctags_Cmd = /home/kbukin/usr/bin/ctags
 
 command! -nargs=1 Ss let @/ = <q-args>|set hlsearch
@@ -211,4 +216,6 @@ map ,k :se isk=@,48-57,_,192-255
 "
 " wrapping lines in vimdiff
 autocmd FilterWritePre * if &diff | setlocal wrap< | endif
+
+"set statusline=%F%m%r%h%w\ [%l/%L,\ %v]\ [%p%%]\ %=[TYPE=%Y]\ [FMT=%{&ff}]\ %{\"[ENC=\".(&fenc==\"\"?&enc:&fenc).\"]\"}
 
