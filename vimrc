@@ -59,7 +59,15 @@ if has('folding')
   set foldlevelstart=99  " start unfolded
 endif
 
+if v:version > 703 || v:version == 703 && has('patch541')
+  set formatoptions+=j " remove comment leader when joining comments
+endif
+set formatoptions+=n   " smart auto-indenting inside numbered lists
+
 autocmd Filetype gitcommit setlocal spell textwidth=72
+set hidden                " allows you to hide buffers with unsaved changes without being prompted
+set laststatus=2          " always show status line
+set lazyredraw            " dont' update screen during macro replay
 
 "if exists('+colorcolumn')
 "  " highlight up to 255 columns (this is the current vim max) beyond
