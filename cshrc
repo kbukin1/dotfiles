@@ -104,12 +104,6 @@ if (-e /usr/local/deskset/man) setenv MANPATH ${MANPATH}:/usr/local/deskset/man
 if (-e /usr/X11R6/man) setenv MANPATH ${MANPATH}:/usr/X11R6/man
 setenv	GFLAGS	-r11
 
-# whitebox workaround - whitebox sets LANG to en_US.UTF-8 which confuses man and perldoc
-unsetenv LANG
-
-#if ($?EDITOR) then
-#  unsetenv EDITOR
-#endif
 setenv EDITOR vim
 
 ##echo "trace_c024"
@@ -340,8 +334,6 @@ if (($?INIT_TCSH) && ($INIT_TCSH == 1)) then
   #set noclobber		# don't write over existing files
   uncomplete *			# flush out all file completion customizations
 
-  set history = 100
-  
   set notify
   set filec
   
@@ -350,11 +342,6 @@ if (($?INIT_TCSH) && ($INIT_TCSH == 1)) then
   set correct=cmd	# correct misspelled commands
   
   set matchbeep=nomatch
-  #set tty=`/bin/tty | /bin/sed 's/\/dev\/tty//'`
-  # if ($OSTYPE == "SunOS") set tty=`/bin/tty | /home/utils/perl-5.6.1/bin/perl5.6.1 -pe 's/\/dev\/\w+\///'`
-  # if ($OSTYPE == "Linux") set tty=`/usr/bin/tty | /home/utils/perl-5.8.6/bin/perl -pe 's/\/dev\/\w+\///'`
-  set	histfile="$HOME/.$HNAME-$tty"
-##echo "trace_t10"
   source ${HOME}/.login
 ##echo "trace_t20"
 else
