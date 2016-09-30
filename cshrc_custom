@@ -33,6 +33,7 @@ setenv SHELL /bin/tcsh # this is to shut up moronic envupdate
 eval `dircolors ~/.dircolors.ansi-universal`
 
 unsetenv LESSOPEN
+setenv LESS '--quit-if-one-screen --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
 
 #setenv LESS_TERMCAP_mb `echotc md; echotc AF 1`
 #setenv LESS_TERMCAP_md `echotc md; echotc AF 1`
