@@ -227,3 +227,8 @@ autocmd FilterWritePre * if &diff | setlocal wrap< | endif
 
 "set statusline=%F%m%r%h%w\ [%l/%L,\ %v]\ [%p%%]\ %=[TYPE=%Y]\ [FMT=%{&ff}]\ %{\"[ENC=\".(&fenc==\"\"?&enc:&fenc).\"]\"}
 
+noremap <Up> <nop>      " disable arrows
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
+
