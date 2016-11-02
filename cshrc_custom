@@ -7,6 +7,7 @@ setenv P4DIFF vimdiff
 setenv PATH "$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH"
 setenv PATH "/home/utils/tmux-2.1/bin:/home/utils/openssh-7.1p2/bin:$PATH"
 setenv PATH "/home/utils/vim-7.4.712/bin:/home/utils/git-2.9.2/bin:$PATH"
+setenv PATH "/home/utils/Python-2.7.8/bin:/home/utils/git-2.9.2/bin:$PATH"
 
 # color ls
 setenv SHELL /bin/tcsh # this is to shut up moronic envupdate
@@ -23,7 +24,9 @@ setenv LESS '--quit-if-one-screen --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNR
 #setenv LESS_TERMCAP_ue `echotc me`
 #setenv LESS_TERMCAP_us `echotc md; echotc AF 2`
 
-setenv LD_LIBRARY_PATH /home/utils/libevent-2.0.22-stable/lib
+setenv LD_LIBRARY_PATH /home/utils/libevent-2.0.22-stable/lib:/home/kbukin/usr/lib64:/home/utils/gcc-4.9.3/lib64
+
+setenv PYTHONPATH /home/kbukin/usr/lib/python2.6/site-packages
 
 #setenv TEST_NVBUILD_PATH /home/scratch.kbukin/trees/nvgpu_inc/kbukin_nvgpu_jenkins5/hw/nv/utils/nvbuild/nvbuild-2.26.1
 #setenv WELD_ALREADY_RUN 1
