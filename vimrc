@@ -39,14 +39,11 @@ set showmatch
 set cursorline                 " highlight current line
 set expandtab                  " use spaces instead of tabs
 
-set sw=2 ai noea
-set ts=2
-set shiftwidth=2
-
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
-
+set sw=4 ai noea
+set ts=4
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 
 set splitbelow
 set splitright
@@ -67,13 +64,22 @@ set formatoptions+=n   " smart auto-indenting inside numbered lists
 autocmd Filetype gitcommit setlocal spell textwidth=72
 set hidden                " allows you to hide buffers with unsaved changes without being prompted
 " set laststatus=2          " always show status line
-set lazyredraw            " dont' update screen during macro replay
+set lazyredraw            " don't update screen during macro replay
+set nojoinspaces          " don't autoinsert two spaces after '.', '?', '!' for join command
+set scrolloff=3           " start scrolling 3 lines   before edge of viewport
+set sidescrolloff=3       " start scrolling 3 columns before edge of viewport
+
+set shortmess+=A          " ignore swapfile message
+set shortmess+=I          " no splash screen
+set shortmess+=W          " don't echo [written] when writing
+set shortmess+=a          " use abbreviations in messages, e.g. [RO] instead of [readonly]
+
 
 "if exists('+colorcolumn')
 "  " highlight up to 255 columns (this is the current vim max) beyond
 "  " 'textdidth'
 "  let &l:colorcolumn='+' . join(range(0,254), ',+')
-"endif
+" endif
 
 
 "set cul                                      " highlight current line
