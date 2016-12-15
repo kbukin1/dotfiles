@@ -15,6 +15,7 @@
   st = status -sb
   dt = difftool
 	br = branch
+	co = checkout
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
