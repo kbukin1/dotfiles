@@ -24,7 +24,9 @@ setenv LESS '--quit-if-one-screen --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNR
 #setenv LESS_TERMCAP_ue `echotc me`
 #setenv LESS_TERMCAP_us `echotc md; echotc AF 2`
 
-setenv LD_LIBRARY_PATH /home/utils/libevent-2.0.22-stable/lib:/home/kbukin/usr/lib64:/home/utils/gcc-4.9.3/lib64
+setenv LD_LIBRARY_PATH /home/utils/libevent-2.0.22-stable/lib
+#setenv LD_LIBRARY_PATH /home/utils/libevent-2.0.22-stable/lib:/home/kbukin/usr/lib64:/home/utils/gcc-4.9.3/lib64
+#setenv LD_LIBRARY_PATH /home/utils/libevent-2.0.22-stable/lib # needed by tmux
 
 setenv PYTHONPATH /home/kbukin/usr/lib/python2.6/site-packages
 
