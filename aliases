@@ -104,4 +104,4 @@ endif
 
 alias dsh /home/nv/utils/container-tools/bin/nvdocker run -t -i nv:centos57 /bin/tcsh
 alias weather curl -s wttr.in/milpitas
-
+alias qgdb /home/utils/gdb-7.6-python/bin/gdb -q
