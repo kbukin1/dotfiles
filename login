@@ -11,5 +11,11 @@ if ($?prompt) then
     stty kill "" 
 endif
 
-setenv TERM xterm-256color
+if ($TERM == "dumb") then
+    setenv TERM vt100
+endif
+
+if ($?TMUX) then
+    setenv TERM xterm-256color
+endif
 
