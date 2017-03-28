@@ -14,3 +14,11 @@ handle SIGALRM nopass
 #target remote tcp:10.31.218.57:6443
 #target remote tcp:10.31.217.151:6443
 #target remote tcp:10.31.217.161:6443
+
+python
+import sys
+sys.path.insert(0, '/home/scratch.kbukin_fermi/opt/src/python')
+from libstdcxx.v6.printers import register_libstdcxx_printers
+register_libstdcxx_printers (None)
+end
+
