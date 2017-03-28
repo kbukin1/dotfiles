@@ -215,6 +215,8 @@ if has("autocmd")
 "    autocmd BufNewFile,BufRead *.vx set filetype=viva
     autocmd BufNewFile,BufRead *.vr* set filetype=vera
     autocmd BufNewFile,BufRead Makeppfile set filetype=make
+    " For dot (graphviz) files that use .gv
+    autocmd BufRead,BufNewFile *.gv set filetype=dot
 endif " has("autocmd")
 
 map ,k :se isk=@,48-57,_,192-255
