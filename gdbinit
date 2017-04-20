@@ -6,6 +6,11 @@ set confirm off
 # add-auto-load-safe-path /home/utils/gcc-4.6.2/lib64/libstdc++.so.6.0.16-gdb.py
 catch throw
 handle SIGALRM nopass
+
+#layout asm
+#layout regs
+#set disassembly-flavor intel
+
 #set disassembly-flavor intel
 #set disassemble-next-line on
 
