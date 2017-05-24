@@ -16,6 +16,7 @@
   dt = difftool
 	br = branch
 	co = checkout
+	dw = diff --word-diff
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
