@@ -7,6 +7,8 @@ set confirm off
 catch throw
 handle SIGALRM nopass
 
+set follow-fork-mode parent
+
 #layout asm
 #layout regs
 #set disassembly-flavor intel
@@ -27,3 +29,4 @@ from libstdcxx.v6.printers import register_libstdcxx_printers
 register_libstdcxx_printers (None)
 end
 
+#source /home/kbukin/usr/share/peda/peda.py
