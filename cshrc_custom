@@ -6,7 +6,7 @@ setenv MANPAGER less
 setenv P4DIFF /home/scratch.kbukin_libs/git/roberteldersoftwarediff/diff-paged.sh
 
 setenv PATH "$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-setenv PATH "/home/utils/tmux-2.5/bin:/home/utils/openssh-7.1p2/bin:$PATH"
+setenv PATH "/home/utils/tmux-2.3/bin:/home/utils/openssh-7.1p2/bin:$PATH" # tmux-copycat works only with 2.3
 setenv PATH "/home/utils/vim-7.4.712/bin:/home/utils/git-2.9.2/bin:$PATH"
 setenv PATH "/home/utils/Python-2.7.8/bin:/home/utils/git-2.9.2/bin:$PATH"
 
