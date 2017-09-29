@@ -12,7 +12,7 @@ if (! $?SEP)  setenv SEP   ":"
 alias a alias
 alias c clear
 alias g grep
-alias h history
+alias h 'history | tail -n30'
 alias grep grep --colour=auto
 
 alias dir ls -l
@@ -105,3 +105,6 @@ endif
 alias dsh /home/nv/utils/container-tools/bin/nvdocker run -t -i nv:centos57 /bin/tcsh
 alias weather curl -s wttr.in/milpitas
 alias qgdb /home/utils/gdb-7.6-python/bin/gdb -q
+alias hc 'history | awk '\''{print $3}'\'' | sort | uniq -c | sort -nr | head -25'
+alias rdiff /home/scratch.kbukin_libs/git/roberteldersoftwarediff/roberteldersoftwarediff.py
+

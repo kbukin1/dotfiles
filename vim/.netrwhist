@@ -1,10 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/usr/src/trees/kbukin_nvgpu_l0/hw/nvgpu/ip/nvif/nvlink/2.0/defs/common/public/ness/interfaces/gvlit1'
-let g:netrw_dirhist_2='/usr/src/trees/kbukin_nvgpu_l0/hw/nvgpu/ip/display/nvdisplay/2.0/defs/public/ness/display/modules/gvlit1'
-let g:netrw_dirhist_3='/usr/src/trees/kbukin_nvgpu_l0/hw/nvgpu/ip/nvif/nvlink/2.0/manuals/dl/gvlit1'
-let g:netrw_dirhist_4='/home/nv/utils/nvbuild'
-let g:netrw_dirhist_5='/home/kbukin/dotfiles'
-let g:netrw_dirhist_6='/home/kbukin'
-let g:netrw_dirhist_7='/home/kbukin/.as'
-let g:netrw_dirhist_8='/home/kbukin/logs'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/scratch.mantolini_inf_1/konstantin/trees/c9/hw/nvgpu/files'
+let g:netrw_dirhist_2='/home/scratch.kbukin_libs/git/btrace-readlink/btrace'
+let g:netrw_dirhist_3='/home/scratch.kbukin_libs/git/ctrace/btrace'

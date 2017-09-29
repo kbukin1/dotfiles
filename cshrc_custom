@@ -2,11 +2,12 @@
 
 setenv MANPAGER less
 # setenv P4DIFF ~/usr/bin/tkdiff
-setenv P4DIFF vimdiff
+#setenv P4DIFF vimdiff
+setenv P4DIFF /home/scratch.kbukin_libs/git/roberteldersoftwarediff/diff-paged.sh
 
 if ($OSTYPE != "Win32") then
     setenv PATH "$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH"
-    setenv PATH "/home/utils/tmux-2.1/bin:/home/utils/openssh-7.1p2/bin:$PATH"
+    setenv PATH "/home/utils/tmux-2.3/bin:/home/utils/openssh-7.1p2/bin:$PATH"
     setenv PATH "/home/utils/vim-7.4.712/bin:/home/utils/git-2.9.2/bin:$PATH"
     setenv PATH "/home/utils/Python-2.7.8/bin:/home/utils/git-2.9.2/bin:$PATH"
 endif
@@ -17,6 +18,7 @@ eval `dircolors ~/.dircolors.ansi-universal`
 
 unsetenv LESSOPEN
 setenv LESS '--quit-if-one-screen --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
+unsetenv EVENT_NOEPOLL
 
 #setenv LESS_TERMCAP_mb `echotc md; echotc AF 1`
 #setenv LESS_TERMCAP_md `echotc md; echotc AF 1`
