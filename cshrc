@@ -83,15 +83,16 @@ else
 endif
 
 # auto log out of lsf interactive shell, unless running in interactive queue
-if ($?LSB_QUEUE) then
-  if ($LSB_QUEUE == "l_pri_interactive" || $LSB_QUEUE == "o_pri_interactive") then
-    unset autologout
-  else
-    set autologout = 30
-  endif
-else
-  unset autologout
-endif
+#if ($?LSB_QUEUE) then
+#  if ($LSB_QUEUE == "l_pri_interactive" || $LSB_QUEUE == "o_pri_interactive") then
+#    unset autologout
+#  else
+#    set autologout = 30
+#  endif
+#else
+#  unset autologout
+#endif
+unset autologout
 
 ##echo "trace_c02"
 
