@@ -9,7 +9,7 @@ if ($OSTYPE != "Win32") then
     setenv PATH "$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH"
     setenv PATH "/home/utils/tmux-2.3/bin:/home/utils/openssh-7.1p2/bin:$PATH"
     setenv PATH "/home/utils/vim-7.4.712/bin:/home/utils/git-2.9.2/bin:$PATH"
-    setenv PATH "/home/utils/Python-2.7.8/bin:/home/utils/git-2.9.2/bin:$PATH"
+    setenv PATH "/home/utils/Python-2.7.8/bin:/home/utils/p4-2016.1/bin:$PATH"
 endif
 
 # color ls
