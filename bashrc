@@ -10,6 +10,7 @@ export PATH="~/usr/bin\
 :/home/utils/tmux-2.3/bin\
 :/usr/local/lsf/bin\
 :/home/utils/openssh-7.1p2/bin\
+:/home/nv/bin\
 :$PATH"
 
 

@@ -1,7 +1,7 @@
 # ABBREVIATIONS
 alias a="alias"
 alias c="clear"
-alias h="'history | tail -n30'"
+alias h="history | tail -n30"
 alias grep="grep --colour=auto"
 
 alias dir="ls -l"
@@ -18,7 +18,7 @@ alias bc="bc -q"
 alias tkdiff="~/usr/bin/tkdiff"
 alias bjobsw="bjobs -UF"
 alias vi="vim"
-alias qsh="'qsub -P kepler -q o_pri_interactive_cpu_2G  -Is tcsh'"
+alias qsh="qsub -P kepler -q o_pri_interactive_cpu_2G  -Is tcsh"
 alias cp="cp -i"
 
 
