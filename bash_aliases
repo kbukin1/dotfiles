@@ -21,6 +21,7 @@ alias vi="vim"
 alias qsh="qsub -P kepler -q o_pri_interactive_cpu_2G  -Is tcsh"
 alias cp="cp -i"
 
+alias qgdb="/home/utils/gdb-7.6-python/bin/gdb -q"
 
 g() {
     pushd `cat ~/.saved_dir/$1`;
