@@ -25,3 +25,4 @@ export P4CONFIG=.p4config
 export P4CLIENT=kbukin
 export P4PORT=p4hw:2001
 
+export LESS="--quit-if-one-screen --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4"
