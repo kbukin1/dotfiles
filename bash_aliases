@@ -18,7 +18,7 @@ alias bc="bc -q"
 alias tkdiff="~/usr/bin/tkdiff"
 alias bjobsw="bjobs -UF"
 alias vi="vim"
-alias qsh="qsub -P kepler -q o_pri_interactive_cpu_2G  -Is tcsh"
+alias qsh="qsub -P kepler -q o_pri_interactive_cpu_2G  -Is bash"
 alias cp="cp -i"
 
 alias qgdb="/home/utils/gdb-7.6-python/bin/gdb -q"
