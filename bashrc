@@ -1,6 +1,7 @@
 [[ -r ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -r ~/.bash_prompt ]] && . ~/.bash_prompt
 
-export PS1='\h:\W\$'
+#export PS1='\h:\W\$'
 
 export PATH="~/usr/bin\
 :/home/utils/Python-2.7.8/bin\
