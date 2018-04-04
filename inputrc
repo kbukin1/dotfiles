@@ -1,2 +1,8 @@
 set bell-style none
+set show-all-if-ambiguous on
+TAB: menu-complete
+# cycle forward
+#Control-k: menu-complete
+# cycle backward
+#Control-j: menu-complete-backward
 
