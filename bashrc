@@ -1,6 +1,11 @@
 [[ -r ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -r ~/.bash_prompt ]] && . ~/.bash_prompt
 
+shopt -s cdspell
+shopt -s dirspell
+
+ulimit -c unlimited
+
 #export PS1='\h:\W\$'
 
 export PATH="~/usr/bin\
@@ -23,7 +28,13 @@ export LSB_DEFAULTPROJECT="sw_nv5x"
 export LSB_DEFAULTQUEUE="o_pri_cpu_.9G"
 
 export P4CONFIG=.p4config
-export P4CLIENT=kbukin
+#export P4CLIENT=kbukin
 export P4PORT=p4hw:2001
+export P4DIFF=vimdiff
+export P4EDITOR=vim
 
 export LESS="--quit-if-one-screen --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4"
+
+unset HISTFILE
+#export MALLOC_CHECK_=3
+
