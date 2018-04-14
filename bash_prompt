@@ -10,7 +10,7 @@ __prompt_command() {
     local Blu='\[\e[0;34m\]'
 
     if [ $EXIT != 0 ]; then
-        PS1+="${Red}\h${RCol}"   # Add red if exit code non 0
+        PS1+="${Red}[$EXIT]\h${RCol}"   # Add red if exit code non 0
     else
         PS1+="${Gre}\h${RCol}"
     fi
