@@ -24,7 +24,7 @@ alias cp="cp -i"
 alias qgdb="/home/utils/gdb-7.6-python/bin/gdb -q"
 
 g() {
-    pushd `cat ~/.saved_dir/$1`;
+    cd `cat ~/.saved_dir/$1`;
 }
 s() {
     pwd > ~/.saved_dir/$1;
@@ -32,4 +32,8 @@ s() {
 
 #alias dos2unix=""perl -pi -e 's/\cM//g;'""
 #alias unix2dos=""perl -pi -e 's/\n/\cM\n/m;'""
+
+bkill_grep() {
+    bjobs | grep $1 | perl -pe 's/(\d+).*/$1/' | xargs bkill
+}
 
