@@ -20,6 +20,7 @@ alias bjobsw="bjobs -UF"
 alias vi="vim"
 alias qsh="qsub -P kepler -q o_pri_interactive_cpu_2G  -Is bash"
 alias cp="cp -i"
+alias p4diff="env P4DIFF=diff p4 diff"
 
 alias qgdb="/home/utils/gdb-7.6-python/bin/gdb -q"
 
