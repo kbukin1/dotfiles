@@ -23,6 +23,7 @@ alias cp="cp -i"
 alias p4diff="env P4DIFF=diff p4 diff"
 
 alias qgdb="/home/utils/gdb-7.6-python/bin/gdb -q"
+alias lgdb="/home/utils/gdb-8.2-2/bin/gdb -q"
 
 g() {
     cd `cat ~/.saved_dir/$1`;
