@@ -1,5 +1,15 @@
 # $Id: //hw/nv/env/.cshrc_custom#1 $
 
+
+# removing . from $PATH
+setenv PATH `echo $PATH | sed 's/:\.:/:/g'`
+setenv MESA_NO_3DNOW 1
+
+#setup env if this is beings sourced from someone else's shell
+if (! $?HAME) setenv HNAME `hostname`
+if (! $?SEP)  setenv SEP   ":"
+alias setcl 'setenv CHANGELIST `p4 changes -m1 //kbukin_bringup_g80/sw/pvt/...#have | cut -d" " -f2`'
+
 setenv MANPAGER less
 # setenv P4DIFF ~/usr/bin/tkdiff
 #setenv P4DIFF vimdiff
@@ -9,7 +19,7 @@ if ($OSTYPE != "Win32") then
     setenv PATH "$HOME/usr/bin:/usr/local/bin:/usr/local/sbin:$PATH"
     setenv PATH "/home/utils/tmux-2.3/bin:/home/utils/openssh-7.1p2/bin:$PATH"
     setenv PATH "/home/utils/vim-7.4.712/bin:/home/utils/git-2.9.2/bin:$PATH"
-    setenv PATH "/home/utils/Python-2.7.8/bin:/home/utils/git-2.9.2/bin:$PATH"
+    setenv PATH "/home/utils/Python-2.7.8/bin:/home/utils/p4-2016.1/bin:$PATH"
 endif
 
 # color ls
@@ -36,3 +46,4 @@ setenv PYTHONPATH /home/kbukin/usr/lib/python2.6/site-packages
 #setenv TEST_NVBUILD_PATH /home/scratch.kbukin/trees/nvgpu_inc/kbukin_nvgpu_jenkins5/hw/nv/utils/nvbuild/nvbuild-2.26.1
 #setenv WELD_ALREADY_RUN 1
 #setenv PERL5LIB /usr/src/trees/kbukin_nvgpu_l0/hw/nvgpu/gvlit1/include/projects
+

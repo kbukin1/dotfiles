@@ -85,7 +85,7 @@ setenv RCSINIT -zLT
 
 # Perforce setup
 setenv P4CONFIG .p4config
-setenv P4CLIENT ${USER}
+#setenv P4CLIENT ${USER}
 #
 # Uncomment the P4PORT that is needed. Default is HW.
 #

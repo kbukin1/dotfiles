@@ -1,6 +1,26 @@
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
+filetype off
+
+if has("patch-8.1.0360")
+    set diffopt+=internal,algorithm:patience
+endif
+
+" provides tab-completion for file-realted tasks
+set path+=**
+
+" display all matching files when we tab complete
+set wildmenu
+
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+" let Vundle manage Vundle, required
+"Plugin 'gmarik/Vundle.vim'
+"Bundle 'Valloric/YouCompleteMe'
+
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
 set background=dark
 "colorscheme base16-default
@@ -74,6 +94,13 @@ set shortmess+=I          " no splash screen
 set shortmess+=W          " don't echo [written] when writing
 set shortmess+=a          " use abbreviations in messages, e.g. [RO] instead of [readonly]
 
+
+"map <buffer> <C-K> :ClangFormat<cr>
+"map <C-K> :pyf /home/utils/llvm-6.0.1/bin/clang-format.py<cr>
+"imap <C-K> <c-o>:pyf /home/utils/llvm-6.0.1/bin/clang-format.py<cr>
+
+"map <C-K> :pyf /home/utils/llvm-4.0.1/share/clang/clang-format.py<cr>
+"imap <C-K> <c-o>:pyf /home/utils/llvm-4.0.1/share/clang/clang-format.py<cr>
 
 "if exists('+colorcolumn')
 "  " highlight up to 255 columns (this is the current vim max) beyond
@@ -184,8 +211,8 @@ se wrapscan
 
 " syntax on
 
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
+"map <C-J> <C-W>j<C-W>_
+"map <C-K> <C-W>k<C-W>_
 " inoremap ) )<c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 
 " to highlight column 81 and more: >
@@ -239,4 +266,7 @@ noremap <Up> <nop>      " disable arrows
 noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
+
+"call vundle#end()            " required
+"filetype plugin indent on    " required
 

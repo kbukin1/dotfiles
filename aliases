@@ -1,13 +1,5 @@
 # $Id: //hw/nv/env/.aliases#5 $
 
-# removing . from $PATH
-setenv PATH `echo $PATH | sed 's/:\.:/:/g'`
-setenv MESA_NO_3DNOW 1
-
-#setup env if this is beings sourced from someone else's shell
-if (! $?HAME) setenv HNAME `hostname`
-if (! $?SEP)  setenv SEP   ":"
-
 # ABBREVIATIONS
 alias a alias
 alias c clear
@@ -44,10 +36,9 @@ alias cp cp -i
 
 # FORCE SPECIFIC PATHS AND ARGUMENTS
 alias lp "lp -w"
-alias pushd  'pushd \!*; cd .'
-alias popd  'popd \!*; cd .'
+#alias pushd  'pushd \!*; cd .'
+#alias popd  'popd \!*; cd .'
 alias lpr 'lpr -h'	# skip header page on print jobs
-alias setcl 'setenv CHANGELIST `p4 changes -m1 //kbukin_bringup_g80/sw/pvt/...#have | cut -d" " -f2`'
 
 alias man 'man -a'
 
