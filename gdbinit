@@ -15,10 +15,9 @@ set debug-file-directory /usr/lib/debug
 #layout asm
 #layout regs
 
-set disassembly-flavor intel
+#set disassembly-flavor intel
 #set disassemble-next-line on
 set breakpoint pending on
-
 
 # catch syscall ptrace
 #target remote tcp:10.31.217.156:6443
