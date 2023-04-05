@@ -20,10 +20,15 @@ alias bjobsw="bjobs -UF"
 alias vi="vim"
 alias qsh="qsub -P kepler -q o_pri_interactive_cpu_2G  -Is bash"
 alias cp="cp -i"
+alias p4="/home/utils/p4-2016.1/bin/p4"
 alias p4diff="env P4DIFF=diff p4 diff"
 
-alias qgdb="/home/utils/gdb-8.3.1-2/bin/gdb -q"
+alias qd="/home/utils/gdb-10.1/bin/gdb -q"
 alias pwd=/bin/pwd
+alias python=/home/utils/Python/3.7/3.7.5-20191021/bin/python3
+alias ssh="/home/utils/openssh-8.1p1/bin/ssh -q -o StrictHostKeyChecking=accept-new"
+alias tmux=/home/utils/tmux-3.3a/bin/tmux
+alias git=/home/utils/git-2.9.2/bin/git
 
 g() {
     cd `cat ~/.saved_dir/$1`;
