@@ -80,8 +80,7 @@ alias tkdiff ~/usr/bin/tkdiff
 alias trace_disassembler /home/scratch.kbukin_nv50/kbukin_tesla/hw/hw/class/tools/trace_disassembler/Release_Fermi/trace_disassembler
 alias t_d /home/scratch.kbukin_nv50/kbukin_tesla/hw/hw/kepler1_gk100/../class/tools/trace_disassembler/Release_Kepler//trace_disassembler
 
-#alias ssh ssh -X
-#alias ssh ssh -q \!\* && date
+alias ssh ssh -q -o StrictHostKeyChecking=accept-new
 alias p4review /home/scratch.kbukin_gm100/kbukin_mods/sw/sw/main/apps/p4review/p4review.pl
 alias p4rmerge /home/scratch.kbukin_gm100/kbukin_mods/sw/sw/main/apps/p4review/p4rmerge.pl
 # p4review -save -server -uploadcmd 'curl -u svcsw:Gforcetop#1 --upload-file' 4716528
