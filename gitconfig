@@ -2,7 +2,7 @@
     tool=vimdiff
 [user]
     name = Konstantin Bukin
-    email = kbukin@nvidia.com
+    email = kbukin@gmail.com
 [color]
     diff = auto
 	ui = true
@@ -11,8 +11,9 @@
 	excludesfile = ~/.gitignore
 [alias]
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	lgh = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit -n 10
 	lg1 = log --graph --abbrev-commit --decorate --all --format=format:\"%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\"
-  st = status -sb
+  st = status -s
   dt = difftool
 	br = branch
 	co = checkout
@@ -22,3 +23,8 @@
 	conflictstyle = diff3
 [mergetool]
 	prompt = false
+[sendemail]
+    smtpserver = smtp.googlemail.com
+    smtpencryption = tls
+    smtpserverport = 587
+    smtpuser = kbukin@gmail.com
