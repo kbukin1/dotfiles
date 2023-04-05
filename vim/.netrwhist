@@ -1,5 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/scratch.mantolini_inf_1/konstantin/trees/c9/hw/nvgpu/files'
-let g:netrw_dirhist_2='/home/scratch.kbukin_libs/git/btrace-readlink/btrace'
-let g:netrw_dirhist_3='/home/scratch.kbukin_libs/git/ctrace/btrace'
+let g:netrw_dirhist_cnt =0
