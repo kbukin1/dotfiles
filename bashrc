@@ -14,18 +14,16 @@ ulimit -n 8192
 #export PS1='\h:\W\$'
 
 export PATH="\
-/home/utils/Python-2.7.8/bin\
-:/home/utils/p4-2016.1/bin\
-:/home/utils/vim-8.1.0155/bin\
-:/home/utils/git-2.17.0/bin\
-:/home/utils/tmux-2.3/bin\
-:/home/utils/ghc-8.0.2/bin\
-:/home/kbukin/usr/bin\
-:/usr/local/lsf/bin\
-:/home/utils/openssh-7.1p2/bin\
+/home/kbukin/usr/bin\
 :/home/nv/bin\
+:/usr/local/lsf/bin\
+:/home/utils/p4-2016.1/bin\
 :$PATH"
 
+#export GENIE_BRANCH_DEFAULT=nvmobile
+#export LM_LICENSE_FILE="SNPSLMD_LICENSE_FILE=1711@sac-lic-31:1711@sc-lic-33:1711@sc-lic-32:1711@lic-34:1711@sc-lic-14"
+
+unset HISTFILE
 
 # LSF stuff
 LSF="/usr/local/lsf"
@@ -42,7 +40,4 @@ export EDITOR=vim
 export P4EDITOR=$EDITOR
 
 export LESS="--quit-if-one-screen --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4"
-
-unset HISTFILE
-#export MALLOC_CHECK_=3
-
+export SNPSLMD_LICENSE_FILE=1711@synopsys-lic-02:1711@dc7-lic-01:1711@dc6-lic-07:1711@dc6-lic-06:1711@dc7-lic-35:1711@lic-34
