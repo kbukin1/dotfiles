@@ -7,6 +7,7 @@ shopt -s cdspell
 #shopt -s histappend
 #export HISTFILESIZE=1000000
 #export HISTSIZE=1000000
+unset HISTFILE
 
 ulimit -c unlimited
 ulimit -n 8192
@@ -18,12 +19,15 @@ export PATH="\
 :/home/nv/bin\
 :/usr/local/lsf/bin\
 :/home/utils/p4-2016.1/bin\
-:$PATH"
+:/home/utils/Python-3.11.0/bin\
+:/bin\
+:/usr/bin\
+:/sbin\
+:/usr/sbin\
+"
 
 #export GENIE_BRANCH_DEFAULT=nvmobile
 #export LM_LICENSE_FILE="SNPSLMD_LICENSE_FILE=1711@sac-lic-31:1711@sc-lic-33:1711@sc-lic-32:1711@lic-34:1711@sc-lic-14"
-
-unset HISTFILE
 
 # LSF stuff
 LSF="/usr/local/lsf"
