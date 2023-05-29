@@ -7,6 +7,7 @@ shopt -s cdspell
 shopt -s histappend
 export HISTFILESIZE=1000000
 export HISTSIZE=1000000
+export HISTIGNORE='bg:fg:history:h:exit'
 
 ulimit -c unlimited
 ulimit -n 8192
