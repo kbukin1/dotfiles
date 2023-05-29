@@ -4,10 +4,9 @@
 shopt -s cdspell
 #shopt -s dirspell
 
-#shopt -s histappend
-#export HISTFILESIZE=1000000
-#export HISTSIZE=1000000
-unset HISTFILE
+shopt -s histappend
+export HISTFILESIZE=1000000
+export HISTSIZE=1000000
 
 ulimit -c unlimited
 ulimit -n 8192
