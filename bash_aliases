@@ -28,7 +28,7 @@ alias pwd=/bin/pwd
 alias ssh="/home/utils/openssh-8.1p1/bin/ssh -q -o StrictHostKeyChecking=accept-new"
 alias scp="scp -q"
 alias tmux=/home/utils/tmux-3.3a/bin/tmux
-alias git=/home/utils/git-2.9.2/bin/git
+alias git=/home/utils/git-2.38.0/bin/git
 
 g() {
     cd `cat ~/.saved_dir/$1`;
