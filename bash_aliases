@@ -23,12 +23,12 @@ alias cp="cp -i"
 alias p4="/home/utils/p4-2016.1/bin/p4"
 alias p4diff="env P4DIFF=diff p4 diff"
 
-alias qd="/home/utils/gdb-10.1/bin/gdb -q"
+alias qd="/home/utils/gdb-12.1-2/bin/gdb -q"
 alias pwd=/bin/pwd
 alias ssh="/home/utils/openssh-8.1p1/bin/ssh -q -o StrictHostKeyChecking=accept-new"
 alias scp="scp -q"
 alias tmux=/home/utils/tmux-3.3a/bin/tmux
-alias git=/home/utils/git-2.38.0/bin/git
+alias git=/home/utils/git-2.42.0/bin/git
 
 g() {
     cd `cat ~/.saved_dir/$1`;
