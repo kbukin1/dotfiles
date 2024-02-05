@@ -81,7 +81,14 @@ if v:version > 703 || v:version == 703 && has('patch541')
 endif
 set formatoptions+=n   " smart auto-indenting inside numbered lists
 
+" Spell-check Markdown files and Git Commit Messages
+autocmd FileType markdown setlocal spell
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" Enable dictionary auto-completion in Markdown files and Git Commit Messages
+autocmd FileType markdown setlocal complete+=kspell
+autocmd FileType gitcommit setlocal complete+=kspell
+
 set hidden                " allows you to hide buffers with unsaved changes without being prompted
 " set laststatus=2          " always show status line
 set lazyredraw            " don't update screen during macro replay
@@ -111,6 +118,8 @@ set shortmess+=a          " use abbreviations in messages, e.g. [RO] instead of 
 
 "set cul                                      " highlight current line
 "hi CursorLine term=none cterm=none ctermbg=11 " adjust color
+"hi CursorLineNr    term=bold cterm=bold ctermfg=012 gui=bold
+hi CursorLineNr    term=bold cterm=bold ctermfg=012 gui=bold
 
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "atch OverLength /\%81v.\+/
@@ -269,4 +278,22 @@ noremap <Right> <nop>
 
 "call vundle#end()            " required
 "filetype plugin indent on    " required
+filetype plugin on
 
+" vimwiki
+let wiki_1 = {}
+let wiki_1.path   = '~/docs/wiki/'
+let wiki_1.syntax = 'markdown'
+let wiki_1.ext    = 'md'
+
+let wiki_2 = {}
+let wiki_2.path = '~/docs/test/'
+let wiki_2.path_html = '~/gen/test/'
+ 
+let g:vimwiki_list = [wiki_1, wiki_2]
+
+" let g:vimwiki_list = [{'path': '~/docs/private/', 'syntax': 'markdown', 'ext': 'md'},
+"                     \ {'path': '~/docs/nvbpfd/'},
+"                     \ {'path': '~/docs/nvuring/'},
+"                     \ {'path': '~/docs/test/'},
+"                     \ ]
