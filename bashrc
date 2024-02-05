@@ -10,7 +10,7 @@ export HISTSIZE=1000000
 export HISTIGNORE='bg:fg:history:h:exit'
 
 ulimit -c unlimited
-ulimit -n 8192
+# ulimit -n 8192
 
 #export PS1='\h:\W\$'
 
@@ -19,7 +19,7 @@ export PATH="\
 :/home/nv/bin\
 :/usr/local/lsf/bin\
 :/home/utils/p4-2016.1/bin\
-:/home/utils/Python-3.11.0/bin\
+:/home/utils/Python/builds/3.11.6-20240102/bin\
 :/bin\
 :/usr/bin\
 :/sbin\
