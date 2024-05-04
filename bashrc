@@ -44,4 +44,6 @@ export EDITOR=vim
 export P4EDITOR=$EDITOR
 
 export LESS="--quit-if-one-screen --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4"
-export SNPSLMD_LICENSE_FILE=$(/home/nv/bin/build_lic_list.pl /home/tools/admin/license_files/*synopsys*)
+if [ -f /home/nv/bin/build_lic_list.pl ]; then
+    export SNPSLMD_LICENSE_FILE=$(/home/nv/bin/build_lic_list.pl /home/tools/admin/license_files/*synopsys*)
+fi
