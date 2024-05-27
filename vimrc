@@ -120,6 +120,9 @@ set shortmess+=a          " use abbreviations in messages, e.g. [RO] instead of 
 "hi CursorLine term=none cterm=none ctermbg=11 " adjust color
 "hi CursorLineNr    term=bold cterm=bold ctermfg=012 gui=bold
 hi CursorLineNr    term=bold cterm=bold ctermfg=012 gui=bold
+" fancy cursor highlight:
+"hi CursorLine                             ctermbg=237 ctermfg=grey guibg=#3a3a3a cterm=none gui=none
+"hi CursorLineNr                           ctermfg=white ctermbg=magenta guibg=#3a3a3a cterm=none gui=none
 
 "highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "atch OverLength /\%81v.\+/
@@ -138,13 +141,6 @@ if &bg == "dark"
     highlight MatchParen ctermbg=darkblue guibg=blue
 endif
 
-" Add highlighting for function definition in C++
-function! EnhanceCppSyntax()
-    syn match cppFuncDef "::\~\?\zs\h\w*\ze([^)]*\()\s*\(const\)\?\)\?$"
-    hi def link cppFuncDef Special
-endfunction
-
-autocmd Syntax *.cpp call EnhanceCppSyntax()
 
 
 function! s:insert_gates()
